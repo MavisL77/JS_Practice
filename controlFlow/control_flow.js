@@ -50,3 +50,25 @@ let isAuthenticated = true;
 let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";
 
 console.log("Authentication Status:", authenticationStatus);
+
+
+let role = "Subscriber";
+let serviceLevel;
+
+if (role === "Employee") {
+        serviceLevel = "Access granted: You can use the Dietary Services.";
+    } 
+    else if (role === "Enrolled Member") {
+        serviceLevel = "Access granted: You can use the Dietary Services and have one-on-one interaction with a dietician.";
+    } 
+    else if (role === "Subscriber") {
+        serviceLevel = "Access granted: You have partial access to Dietary Services.";
+    } 
+    else if (role === "Non-Subscriber") {
+       serviceLevel = "Access denied: Please enroll or subscribe to avail this facility.";
+    } 
+    else {
+       serviceLevel = "Invalid role entered. Please try again.";
+    }
+
+console.log("Service Level:", serviceLevel);
