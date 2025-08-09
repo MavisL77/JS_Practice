@@ -17,9 +17,9 @@ console.log(globalLet); // Output: "I'm also global, but scoped with let"
 console.log(globalConst); // Output: "I'm a global constant"
 
 //Block Scope
-//console.log(blockVar);
-//console.log(blockLet);
-//console.log(blockConst);
+// console.log(blockVar);// Output: "I'm a block-scoped var"
+// console.log(blockLet);//Error
+// console.log(blockConst);//Error
 
 function show(){
 var functionVar = "I'm a block-scoped var";
@@ -31,3 +31,13 @@ show();
 console.log(functionVar); // Throws ReferenceError
 console.log(functionLet); // Throws ReferenceError
 console.log(functionConst); // Throws ReferenceError
+
+//a: Let b: Const c: Var
+// Inside block:
+// a can be changed.
+// b causes error if reassigned.
+// c can be changed.
+
+// Outside block:
+// a and b give ReferenceError (don’t exist there).
+// c still exists and can be reassigned because var ignores block scope.
