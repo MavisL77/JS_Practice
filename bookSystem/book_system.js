@@ -49,9 +49,10 @@ function clearInputs() {
 }
 
 function deleteBook(index) {
-    if books.length >= index{
+    if (books.length >= index) {
         books.splice(index-1, 1);
-        showbooks();    
+        showbooks();
+        return;    
     }else{
         alert('The designated book does not exist.');
     }
